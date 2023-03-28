@@ -1,0 +1,142 @@
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Lobster&family=Raleway:wght@200;300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button,
+label,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  z-index: -1000;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: #e9ebe8;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  width: 100%;
+  border-bottom: 2px solid #40240d;
+  background-color: rgba(233, 235, 232, 0.5);
+}
+header .logo {
+  color: #40240d;
+  font-family: "Lobster", sans-serif;
+  font-size: 35px;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+header ul li a {
+  font-weight: 600;
+  color: #40240d;
+  font-size: 18px;
+}
+header .search-basket-wrapper {
+  display: flex;
+  align-items: center;
+}
+header form {
+  border-bottom: 2px solid rgb(124, 70, 79);
+  margin-right: 15px;
+  cursor: pointer;
+}
+header form input {
+  background-color: transparent;
+  border: none;
+  width: 120px;
+  padding: 3px;
+}
+header form input[type=text] {
+  font-weight: 500;
+  font-size: 17px;
+  color: #40240d;
+}
+header form i {
+  font-size: 18px;
+}
+
+.welcome {
+  padding: 10px;
+  padding-top: 76px;
+}
+.welcome-main-bg {
+  background: url("../img/main-choco.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-main-bg h2 {
+  color: #40240d;
+  width: 50%;
+  height: 80%;
+  min-width: 313px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-main-bg h2:hover {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(233, 235, 232, 0.5);
+}
+.welcome-main-phrase {
+  text-align: center;
+}
+.welcome-main-phrase p:first-child {
+  font-family: "Lobster", sans-serif;
+  font-size: 50px;
+}
+.welcome-main-phrase p:last-child {
+  font-family: "Lobster", sans-serif;
+  font-weight: 500;
+}

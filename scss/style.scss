@@ -1,0 +1,121 @@
+@import "custom.reset";
+@import "responsive";
+// XEICON
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Lobster&family=Raleway:wght@200;300;400;500;600;700&display=swap");
+
+// Variables
+$logo-font: "Lobster", sans-serif;
+$basic-font: "Raleway", sans-serif;
+$font-color: #40240d;
+$basic-bg-color: #e9ebe8;
+$section-padding: 10px;
+
+// Mixin
+@mixin displayFlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: $basic-font;
+}
+
+body {
+  background-color: $basic-bg-color;
+}
+
+// ------- Header -------
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  width: 100%;
+  border-bottom: 2px solid $font-color;
+  background-color: rgba($basic-bg-color, $alpha: 0.5);
+
+  .logo {
+    color: $font-color;
+    font-family: $logo-font;
+    font-size: 35px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    li {
+      a {
+        font-weight: 600;
+        color: $font-color;
+        font-size: 18px;
+      }
+    }
+  }
+  .search-basket-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  form {
+    border-bottom: 2px solid rgb(124, 70, 79);
+    margin-right: 15px;
+
+    cursor: pointer;
+    label {
+    }
+    input {
+      background-color: transparent;
+      border: none;
+      width: 120px;
+      padding: 3px;
+      &[type="text"] {
+        font-weight: 500;
+        font-size: 17px;
+        color: $font-color;
+      }
+    }
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+// ------- Section: welcome -------
+.welcome {
+  padding: $section-padding;
+  padding-top: 76px;
+  &-main-bg {
+    background: url("../img/main-choco.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    @include displayFlexCenter;
+    h2 {
+      color: $font-color;
+      width: 50%;
+      height: 80%;
+      min-width: 313px;
+      @include displayFlexCenter;
+      &:hover {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($basic-bg-color, $alpha: 0.5);
+      }
+    }
+  }
+  &-main-phrase {
+    text-align: center;
+    p:first-child {
+      font-family: $logo-font;
+      font-size: 50px;
+    }
+    p:last-child {
+      font-family: $logo-font;
+      font-weight: 500;
+    }
+  }
+}

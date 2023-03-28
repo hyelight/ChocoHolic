@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChocoHolic</title>
-</head>
-<body>
-    
-</body>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <a class="logo" href="#">ChocoHolic</a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#personal">Personal</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+        <div class="search-basket-wrapper">
+          <form action="#none">
+            <label for="search"
+              ><i
+                class="fas fa-light fa-magnifying-glass"
+                style="color: #40240d"
+              ></i
+            ></label>
+            <input id="search" type="text" />
+          </form>
+          <i class="fas fa-light fa-basket-shopping" style="color: #40240d"></i>
+        </div>
+      </header>
+      <!-- Main -->
+      <main>
+        <!-- Section: welcome -->
+        <section class="welcome" id="home">
+          <h1 class="sr-only">welcome 메인 Home</h1>
+          <div class="welcome-main-bg">
+            <h2>
+              <div class="welcome-main-phrase">
+                <p>My Sweet Holic</p>
+                <p>
+                  Everything is good <br />
+                  if it's made of chocolate.
+                </p>
+              </div>
+            </h2>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer></footer>
+    </div>
+  </body>
 </html>
