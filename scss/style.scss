@@ -25,7 +25,7 @@ $section-padding: 10px;
     display: inline-block;
     font-size: 25px;
     font-family: $logo-font;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-bottom: 40px;
     &::after {
       content: "";
@@ -62,7 +62,8 @@ header {
   padding: 15px 24px;
   width: 100%;
   border-bottom: 2px solid $font-color;
-  background-color: rgba($basic-bg-color, $alpha: 0.5);
+  background-color: rgba($basic-bg-color, $alpha: 0.8);
+  z-index: 10;
 
   .logo {
     color: $font-color;
@@ -180,8 +181,8 @@ header {
   }
   &-left {
     float: left;
-    padding: 50px;
     width: 55%;
+    min-width: 440px;
     .common-title {
       @include commonTitle;
     }
@@ -195,5 +196,58 @@ header {
     background-size: contain;
     width: 40%;
     height: 40vh;
+  }
+}
+
+// ------- Section: sweets -------
+.sweets {
+  padding: $section-padding + 180px;
+  display: flex;
+  justify-content: center;
+  &-wrapper {
+    @include commonTitle;
+    max-width: 1060px;
+  }
+  &-photos-left {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+  .sweets-img-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      transition: 0.3s;
+    }
+    &:hover img {
+      cursor: pointer;
+      transform: scale(1.05);
+      filter: brightness(0.6);
+      box-shadow: 1px 1px 7px rgba(209, 170, 84, 1);
+    }
+    &::after {
+      content: "Click!";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: 0.3s;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(209, 170, 84, 0.8);
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }

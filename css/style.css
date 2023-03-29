@@ -64,7 +64,8 @@ header {
   padding: 15px 24px;
   width: 100%;
   border-bottom: 2px solid #40240d;
-  background-color: rgba(233, 235, 232, 0.5);
+  background-color: rgba(233, 235, 232, 0.8);
+  z-index: 10;
 }
 header .logo {
   color: #40240d;
@@ -173,15 +174,15 @@ header form i {
 }
 .aboutus-left {
   float: left;
-  padding: 50px;
   width: 55%;
+  min-width: 440px;
 }
 .aboutus-left .common-title p {
   position: relative;
   display: inline-block;
   font-size: 25px;
   font-family: "Lobster", sans-serif;
-  margin-left: 40px;
+  margin-left: 50px;
   margin-bottom: 40px;
 }
 .aboutus-left .common-title p::after {
@@ -204,4 +205,74 @@ header form i {
   background-size: contain;
   width: 40%;
   height: 40vh;
+}
+
+.sweets {
+  padding: 190px;
+  display: flex;
+  justify-content: center;
+}
+.sweets-wrapper {
+  max-width: 1060px;
+}
+.sweets-wrapper p {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-family: "Lobster", sans-serif;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+.sweets-wrapper p::after {
+  content: "";
+  width: 150%;
+  height: 10px;
+  display: inline-block;
+  background: rgba(124, 70, 79, 0.5);
+  position: absolute;
+  bottom: 6px;
+  left: 0px;
+  z-index: -1;
+}
+.sweets-photos-left {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+.sweets .sweets-img-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sweets .sweets-img-container img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  transition: 0.3s;
+}
+.sweets .sweets-img-container:hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(0.6);
+  box-shadow: 1px 1px 7px rgb(209, 170, 84);
+}
+.sweets .sweets-img-container::after {
+  content: "Click!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(209, 170, 84, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sweets .sweets-img-container:hover::after {
+  opacity: 1;
 }
