@@ -63,9 +63,9 @@ header {
   align-items: center;
   padding: 15px 24px;
   width: 100%;
-  border-bottom: 2px solid #40240d;
   background-color: rgba(233, 235, 232, 0.8);
   z-index: 10;
+  border-bottom: 2px solid #40240d;
 }
 header .logo {
   color: #40240d;
@@ -168,8 +168,12 @@ header form i {
 .aboutus {
   padding: 190px;
   border-bottom: 2px solid #40240d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .aboutus-wrapper {
+  max-width: 1550px;
   overflow: hidden;
 }
 .aboutus-left {
@@ -177,7 +181,7 @@ header form i {
   width: 55%;
   min-width: 440px;
 }
-.aboutus-left .common-title p {
+.aboutus-left .common-title > p {
   position: relative;
   display: inline-block;
   font-size: 25px;
@@ -185,7 +189,7 @@ header form i {
   margin-left: 50px;
   margin-bottom: 40px;
 }
-.aboutus-left .common-title p::after {
+.aboutus-left .common-title > p::after {
   content: "";
   width: 150%;
   height: 10px;
@@ -205,17 +209,30 @@ header form i {
   background-size: contain;
   width: 40%;
   height: 40vh;
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .sweets {
-  padding: 190px;
+  padding: 130px 190px;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #40240d;
 }
 .sweets-wrapper {
-  max-width: 1060px;
+  max-width: 1550px;
 }
-.sweets-wrapper p {
+.sweets-wrapper > p {
   position: relative;
   display: inline-block;
   font-size: 25px;
@@ -223,7 +240,7 @@ header form i {
   margin-left: 50px;
   margin-bottom: 40px;
 }
-.sweets-wrapper p::after {
+.sweets-wrapper > p::after {
   content: "";
   width: 150%;
   height: 10px;
@@ -275,4 +292,72 @@ header form i {
 }
 .sweets .sweets-img-container:hover::after {
   opacity: 1;
+}
+
+.review {
+  padding: 130px 190px;
+  border-bottom: 2px solid #40240d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-wrapper {
+  max-width: 1550px;
+}
+.review-wrapper > p {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-family: "Lobster", sans-serif;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+.review-wrapper > p::after {
+  content: "";
+  width: 150%;
+  height: 10px;
+  display: inline-block;
+  background: rgba(124, 70, 79, 0.5);
+  position: absolute;
+  bottom: 6px;
+  left: 0px;
+  z-index: -1;
+}
+.review-contents-wrapper {
+  display: flex;
+}
+.review-contents-wrapper .review-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.review-contents-wrapper .review-content .review-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.review-contents-wrapper .review-content .review-star {
+  width: 100px;
+}
+.review-contents-wrapper .review-content p {
+  width: 25%;
+  min-width: 225px;
+}
+.review-contents-wrapper .review-content p:nth-child(2) {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.review-contents-wrapper .review-content p:nth-child(3) {
+  color: rgb(124, 70, 79);
+  font-family: "Lobster", sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.review-contents-wrapper .review-content p:nth-child(4) {
+  color: rgb(124, 70, 79);
+  font-weight: 500;
+  margin-bottom: 30px;
 }
