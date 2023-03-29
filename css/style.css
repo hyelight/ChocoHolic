@@ -48,6 +48,10 @@ p {
   font-family: "Raleway", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #e9ebe8;
 }
@@ -81,6 +85,9 @@ header .search-basket-wrapper {
   display: flex;
   align-items: center;
 }
+header .search-basket-wrapper .fa-basket-shopping {
+  cursor: pointer;
+}
 header form {
   border-bottom: 2px solid rgb(124, 70, 79);
   margin-right: 15px;
@@ -103,7 +110,8 @@ header form i {
 
 .welcome {
   padding: 10px;
-  padding-top: 76px;
+  padding-top: 86px;
+  border-bottom: 2px solid #40240d;
 }
 .welcome-main-bg {
   background: url("../img/main-choco.jpg") no-repeat center center;
@@ -122,12 +130,27 @@ header form i {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .welcome-main-bg h2:hover {
   cursor: pointer;
   width: 100%;
   height: 100%;
   background-color: rgba(233, 235, 232, 0.5);
+}
+.welcome-main-bg h2 button {
+  background-color: transparent;
+  border: 2px solid #40240d;
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #40240d;
+  margin-top: 25px;
+  box-shadow: 9px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.welcome-main-bg h2 button:hover {
+  border-image: linear-gradient(90deg, rgb(130, 98, 71) 0%, rgb(209, 170, 84) 34%, rgb(218, 190, 108) 68%, rgb(247, 246, 163) 100%) 2;
 }
 .welcome-main-phrase {
   text-align: center;
@@ -139,4 +162,46 @@ header form i {
 .welcome-main-phrase p:last-child {
   font-family: "Lobster", sans-serif;
   font-weight: 500;
+}
+
+.aboutus {
+  padding: 190px;
+  border-bottom: 2px solid #40240d;
+}
+.aboutus-wrapper {
+  overflow: hidden;
+}
+.aboutus-left {
+  float: left;
+  padding: 50px;
+  width: 55%;
+}
+.aboutus-left .common-title p {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-family: "Lobster", sans-serif;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+.aboutus-left .common-title p::after {
+  content: "";
+  width: 150%;
+  height: 10px;
+  display: inline-block;
+  background: rgba(124, 70, 79, 0.5);
+  position: absolute;
+  bottom: 6px;
+  left: 0px;
+  z-index: -1;
+}
+.aboutus-left-contents {
+  font-size: 20px;
+}
+.aboutus-right {
+  float: right;
+  background: url("../img/aboutus-bg.png") no-repeat center center;
+  background-size: contain;
+  width: 40%;
+  height: 40vh;
 }
