@@ -1,20 +1,11 @@
 @import "custom.reset";
+@import "_variables";
 
 // XEICON
 @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
 
 // FONT
 @import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Lobster&family=Raleway:wght@200;300;400;500;600;700&display=swap");
-
-// Variables
-$logo-font: "Lobster", sans-serif;
-$basic-font: "Raleway", sans-serif;
-$font-color: #40240d;
-$border-color: #40240d;
-$basic-bg-color: #e9ebe8;
-$light-color: rgb(124, 70, 79);
-$section-padding: 10px;
-$max-width: 1550px;
 
 // Mixin
 @mixin displayFlexCenter {
@@ -52,6 +43,12 @@ html {
 
 body {
   background-color: $basic-bg-color;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 // ------- Header -------
@@ -108,6 +105,9 @@ header {
     i {
       font-size: 18px;
     }
+  }
+  .hamburger-menu {
+    display: none;
   }
 }
 
@@ -185,7 +185,7 @@ header {
   &-left {
     float: left;
     width: 55%;
-    min-width: 440px;
+    min-width: 330px;
     .common-title {
       > p {
         @include commonTitle;

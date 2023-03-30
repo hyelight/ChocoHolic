@@ -1,3 +1,23 @@
+// Header 830px 이하일 때 돋보기 클릭 시 검색 창 길어짐
+const searchIcon = document.querySelector("header form i");
+const headerForm = document.querySelector("header form");
+const headerInput = document.querySelector("header input");
+
+searchIcon.addEventListener("click", function () {
+  headerForm.style.borderBottom = "2px solid rgb(124, 70, 79)";
+  headerForm.style.marginRight = "15px";
+  headerInput.style.width = "120px";
+});
+
+// 다른 곳 클릭 시 검색 창 초기화
+document.addEventListener("click", function (e) {
+  if (!headerForm.contains(e.target)) {
+    headerForm.style.borderBottom = "none";
+    headerForm.style.marginRight = "5px";
+    headerInput.style.width = "0";
+  }
+});
+
 // Family Site 아코디언
 const accordionHeader = document.querySelector(".accordion-header");
 const accordionContent = document.querySelector(".accordion-content");

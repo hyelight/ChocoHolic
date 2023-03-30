@@ -56,6 +56,12 @@ body {
   background-color: #e9ebe8;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 header {
   position: fixed;
   display: flex;
@@ -107,6 +113,9 @@ header form input[type=text] {
 }
 header form i {
   font-size: 18px;
+}
+header .hamburger-menu {
+  display: none;
 }
 
 .welcome {
@@ -179,7 +188,7 @@ header form i {
 .aboutus-left {
   float: left;
   width: 55%;
-  min-width: 440px;
+  min-width: 330px;
 }
 .aboutus-left .common-title > p {
   position: relative;

@@ -1,10 +1,25 @@
+@import "_variables";
+
+// Variables
+@mixin maxWidth650 {
+  margin-left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 1605px) {
   .info {
     padding: 30px;
   }
 }
 
+// media 1300px
 @media (max-width: 1300px) {
+  .aboutus,
+  .sweets,
+  .review {
+    padding: 80px; // 💎padding 기준
+  }
   .info {
     &-wrapper {
       flex-direction: column;
@@ -16,7 +31,74 @@
   }
 }
 
+// media 1150px
+@media (max-width: 1150px) {
+  .aboutus {
+    &-left {
+      float: none;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &-right {
+      float: none;
+      width: auto;
+      height: 20vh;
+    }
+  }
+  .sweets {
+    &-photos-left {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .review {
+    &-contents-wrapper {
+      .review-content {
+        .review-img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+// media 830px
 @media (max-width: 830px) {
+  header {
+    .logo {
+      margin: auto;
+      font-size: 30px;
+    }
+    ul {
+      display: none;
+      flex-direction: column;
+    }
+    form {
+      border: none;
+      margin-right: 5px;
+      transition: 0.4s ease-in-out;
+      input {
+        width: 0;
+      }
+    }
+  }
+  .sweets {
+    &-photos-left {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .review {
+    &-contents-wrapper {
+      display: block;
+      .review-content:not(:nth-child(3)) {
+        margin-bottom: 70px;
+        .review-img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
   .info {
     &-wrapper {
       text-align: center;
@@ -38,6 +120,48 @@
         gap: 12px;
       }
       cursor: pointer;
+    }
+  }
+}
+
+// media 650px
+@media (max-width: 650px) {
+  .aboutus {
+    padding: 80px 30px; // 💎padding 기준
+    &-left {
+      .common-title {
+        > p {
+          @include maxWidth650;
+        }
+      }
+    }
+  }
+  .sweets {
+    padding: 80px 30px; // 💎padding 기준
+    &-wrapper {
+      > p {
+        @include maxWidth650;
+      }
+    }
+  }
+  .review {
+    padding: 80px 30px; // 💎padding 기준
+    &-wrapper {
+      > p {
+        @include maxWidth650;
+      }
+    }
+  }
+}
+
+// media 530px
+@media (max-width: 530px) {
+  .sweets {
+    .sweets-img-container {
+      &::after {
+        padding: 8px 13px;
+        font-size: 1.25rem;
+      }
     }
   }
 }
