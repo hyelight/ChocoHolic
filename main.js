@@ -2,11 +2,16 @@
 const searchIcon = document.querySelector("header form i");
 const headerForm = document.querySelector("header form");
 const headerInput = document.querySelector("header input");
+const mainLogo = document.querySelector(".logo");
 
 searchIcon.addEventListener("click", function () {
   headerForm.style.borderBottom = "2px solid rgb(124, 70, 79)";
   headerForm.style.marginRight = "15px";
   headerInput.style.width = "120px";
+  // 검색창 길이 고려
+  if (window.innerWidth <= 550) {
+    mainLogo.style.display = "none";
+  }
 });
 
 // 다른 곳 클릭 시 검색 창 초기화
@@ -15,6 +20,7 @@ document.addEventListener("click", function (e) {
     headerForm.style.borderBottom = "none";
     headerForm.style.marginRight = "5px";
     headerInput.style.width = "0";
+    mainLogo.style.display = "block";
   }
 });
 
