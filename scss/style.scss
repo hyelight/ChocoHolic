@@ -10,7 +10,6 @@
 // Variables
 $logo-font: "Lobster", sans-serif;
 $basic-font: "Raleway", sans-serif;
-$korean-font: "Noto Sans Korean", sans-serif;
 $font-color: #40240d;
 $border-color: #40240d;
 $basic-bg-color: #e9ebe8;
@@ -337,7 +336,7 @@ header {
 // ------- Section: info -------
 .info {
   padding: 90px $section-padding + 180px;
-  background-color: #40240d;
+  background-color: $font-color;
   @include displayFlexCenter;
   &-wrapper {
     max-width: $max-width;
@@ -429,5 +428,19 @@ header {
         }
       }
     }
+  }
+}
+
+// ------- Footer -------
+footer {
+  padding: 30px $section-padding + 50px;
+  background-color: $font-color;
+  color: $basic-bg-color;
+  font-size: 12px;
+  line-height: 1.8rem;
+  border: 0;
+  box-shadow: 0 -0.5px $basic-bg-color;
+  address {
+    font-style: normal;
   }
 }

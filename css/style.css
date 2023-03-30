@@ -458,3 +458,16 @@ header form i {
 .info-content .accordion-content a {
   color: #000;
 }
+
+footer {
+  padding: 30px 60px;
+  background-color: #40240d;
+  color: #e9ebe8;
+  font-size: 12px;
+  line-height: 1.8rem;
+  border: 0;
+  box-shadow: 0 -0.5px #e9ebe8;
+}
+footer address {
+  font-style: normal;
+}
