@@ -1,4 +1,4 @@
-// Header 830px 이하일 때 돋보기 클릭 시 검색 창 길어짐
+// 돋보기 아이콘 클릭 시 검색 창 길어짐
 const searchIcon = document.querySelector("header form i");
 const headerForm = document.querySelector("header form");
 const headerInput = document.querySelector("header input");
