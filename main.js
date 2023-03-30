@@ -18,6 +18,33 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// 햄버거 버튼 메뉴
+const hamburgerBtn = document.createElement("button");
+hamburgerBtn.className = "hamburger-menu";
+hamburgerBtn.addEventListener("click", toggleMenu);
+
+const bar1 = document.createElement("span");
+const bar2 = document.createElement("span");
+const bar3 = document.createElement("span");
+
+bar1.className = "bar";
+bar2.className = "bar";
+bar3.className = "bar";
+
+hamburgerBtn.appendChild(bar1);
+hamburgerBtn.appendChild(bar2);
+hamburgerBtn.appendChild(bar3);
+
+const headerElement = document.querySelector("header");
+headerElement.insertBefore(hamburgerBtn, headerElement.firstChild);
+
+function toggleMenu() {
+  const menu = document.querySelector("header ul");
+  const hamburger = document.querySelector(".hamburger-menu");
+  menu.classList.toggle("active");
+  hamburger.classList.toggle("open");
+}
+
 // Family Site 아코디언
 const accordionHeader = document.querySelector(".accordion-header");
 const accordionContent = document.querySelector(".accordion-content");
