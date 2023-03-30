@@ -285,7 +285,7 @@ header form i {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  background-color: rgba(209, 170, 84, 0.8);
+  background: linear-gradient(90deg, rgb(130, 98, 71) 0%, rgb(209, 170, 84) 34%, rgb(218, 190, 108) 68%, rgb(247, 246, 163) 100%);
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -360,4 +360,101 @@ header form i {
   color: rgb(124, 70, 79);
   font-weight: 500;
   margin-bottom: 30px;
+}
+
+.info {
+  padding: 90px 190px;
+  background-color: #40240d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-wrapper {
+  max-width: 1550px;
+  display: flex;
+  gap: 100px;
+}
+.info-wrapper > span {
+  color: rgb(209, 170, 84);
+  font-family: "Lobster", sans-serif;
+  font-size: 35px;
+}
+.info-content i {
+  color: #e9ebe8;
+  margin-right: 8px;
+}
+.info-content p,
+.info-content a {
+  color: #e9ebe8;
+  font-size: 14px;
+  line-height: 1.8rem;
+}
+.info-content a {
+  display: block;
+}
+.info-content p:first-child:not(.weekday) {
+  color: rgb(218, 190, 108);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.info-content-each-wrapper {
+  display: flex;
+  align-items: center;
+}
+.info-content-each-wrapper .fa-clock {
+  margin-top: -57px;
+}
+.info-content .icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.info-content .accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.info-content .accordion-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #e9ebe8;
+  border-radius: 5px;
+  border: 2px solid rgb(209, 170, 84);
+  position: relative;
+}
+.info-content .accordion-header span {
+  font-weight: 500;
+  text-align: center;
+}
+.info-content .accordion-header::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 10px;
+  color: #40240d;
+  transition: transform 0.3s;
+}
+.info-content .accordion-header.accordion-toggle::after {
+  transform: rotate(180deg);
+}
+.info-content .accordion-content {
+  display: none;
+  background-color: #e9ebe8;
+  border: 2px solid rgb(209, 170, 84);
+  border-top: none;
+  padding: 8px;
+  text-align: center;
+}
+.info-content .accordion-content li {
+  transition: 0.3s;
+}
+.info-content .accordion-content li:hover {
+  background-color: rgba(218, 190, 108, 0.4);
+}
+.info-content .accordion-content a {
+  color: #000;
 }
