@@ -379,6 +379,10 @@ header form i {
   font-family: "Lobster", sans-serif;
   font-size: 35px;
 }
+.info-content-wrapper {
+  display: flex;
+  gap: 100px;
+}
 .info-content i {
   color: #e9ebe8;
   margin-right: 8px;
@@ -446,6 +450,7 @@ header form i {
   background-color: #e9ebe8;
   border: 2px solid rgb(209, 170, 84);
   border-top: none;
+  border-radius: 0 0 5px 5px;
   padding: 8px;
   text-align: center;
 }

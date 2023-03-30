@@ -1,5 +1,4 @@
 @import "custom.reset";
-@import "responsive";
 
 // XEICON
 @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
@@ -348,6 +347,10 @@ header {
       font-size: 35px;
     }
   }
+  &-content-wrapper {
+    display: flex;
+    gap: 100px;
+  }
   &-content {
     i {
       color: $basic-bg-color;
@@ -415,6 +418,7 @@ header {
         background-color: $basic-bg-color;
         border: 2px solid rgba(209, 170, 84, 1);
         border-top: none;
+        border-radius: 0 0 5px 5px;
         padding: 8px;
         text-align: center;
         li {
