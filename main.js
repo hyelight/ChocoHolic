@@ -99,3 +99,25 @@ openingTimeHeader.addEventListener("click", function () {
     }
   });
 });
+
+// 최상단 이동 버튼 (스크롤 인지, 최상단일 때 버튼 사라짐)
+const toTopBtn = document.querySelector(".to-top-btn");
+
+const checkScroll = () => {
+  let pageOffset = window.pageYOffset;
+
+  if (pageOffset !== 0) {
+    toTopBtn.classList.add("show");
+  } else {
+    toTopBtn.classList.remove("show");
+  }
+};
+
+const smoothToTop = () => {
+  if (window.pageYOffset > 0) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+
+window.addEventListener("scroll", checkScroll);
+toTopBtn.addEventListener("click", smoothToTop);

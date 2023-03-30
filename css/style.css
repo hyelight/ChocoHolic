@@ -485,3 +485,21 @@ footer {
 footer address {
   font-style: normal;
 }
+
+.to-top-btn {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 10px;
+  border: 2px solid #40240d;
+  background-color: #b6b5b5;
+  color: #40240d;
+  font-size: 20px;
+  visibility: hidden;
+}
+.to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
