@@ -1,0 +1,27 @@
+{
+  "name": "choco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass scss/style.scss css/style.css && node-sass scss/custom.reset.scss css/custom.reset.css && node-sass scss/responsive.scss css/responsive.css && postcss css/style.css css/custom.reset.css css/responsive.css --use autoprefixer --replace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyelight/my.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyelight/my/issues"
+  },
+  "homepage": "https://github.com/hyelight/my#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  }
+}
